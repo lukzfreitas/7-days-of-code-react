@@ -12,7 +12,7 @@ const Link = (props: LinkProps) => {
         font-size: 16pt;
         color: #202020;
         cursor: ${props.visited ? 'auto' : 'pointer'};
-        font-weight: ${props.visited ? 'bold' : 'nomal'};
+        font-weight: ${props.visited ? 'bold' : 'nomal'};        
         &:hover {
             color: ${props.visited ? '#202020' : '#8DCE97'};
         }
