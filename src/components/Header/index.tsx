@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../../patterns/Logo';
-import Link from '../Link';
-import './header.css';
+import Menu from '../../patterns/Menu';
+
 
 type User = {
   name: string;
@@ -33,6 +33,14 @@ const Header = (props: HeaderProps) => {
       justify-content: space-between;
   `;
 
+  const links = [
+    { label: 'Como Fazer', visited: false, onClick: () => { } },
+    { label: 'Ofertas', visited: false, onClick: () => { } },
+    { label: 'Depoimentos', visited: false, onClick: () => { } },
+    { label: 'Vídeos', visited: false, onClick: () => { } },
+    { label: 'Meu Carrinho', visited: true, onClick: () => { } }
+  ]
+
 
   return (
     <header>
@@ -45,10 +53,7 @@ const Header = (props: HeaderProps) => {
             width={177} />
         </Column>
         <Column>
-          <Link label='Como Fazer' visited={false} key={1} onClick={() => { }} />
-          <Link label='Como Fazer' visited={false} key={1} onClick={() => { }} />
-          <Link label='Como Fazer' visited={false} key={1} onClick={() => { }} />
-          <Link label='Como Fazer' visited={false} key={1} onClick={() => { }} />
+          <Menu links={links}/>
         </Column>
       </Row>
     </header>
