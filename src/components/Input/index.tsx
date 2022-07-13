@@ -8,7 +8,10 @@ interface InputProps {
     borderColor: string;    
     borderRadius: number;    
     backgroundColor: string;
+    border: string;
     iconUrl: string;
+    iconWidth: number;
+    iconHeight: number;
 }
 
 const Input = (props: InputProps) => {
@@ -17,7 +20,7 @@ const Input = (props: InputProps) => {
         width: ${props.width}px;
         height: ${props.height}px;        
         font-size: ${props.fontSize}; 
-        border: 0 solid transparent;        
+        border: transparent;        
         border-radius: ${props.borderRadius};
         margin-left: 20px;
         :focus {
@@ -31,7 +34,8 @@ const Input = (props: InputProps) => {
         width: ${props.width + 60}px;
         height: ${props.height}px;        
         background: ${props.backgroundColor};
-        border: 0 solid transparent;        
+        border: ${props.border};
+        padding: 5px;
         border-radius: ${props.borderRadius};        
     `;
 
@@ -45,7 +49,7 @@ const Input = (props: InputProps) => {
     return (
         <FormControl>
             <Icon>
-                <img src={props.iconUrl} alt="" height={30} width={40} />
+                <img src={props.iconUrl} alt="icon" height={props.iconHeight} width={props.iconWidth} />
             </Icon>
             <Input placeholder={props.placeholder}></Input>
         </FormControl>
