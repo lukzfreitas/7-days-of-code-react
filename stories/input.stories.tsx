@@ -20,8 +20,6 @@ InputNewsletter.args = {
     fontSize: '16pt',
     backgroundColor: '#ffffff',
     borderRadius: 4,
-    border: 0,
-    outlineColorFocus: 'transparent',
-    iconUrl: 'https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/logo.png?raw=true'
+    iconUrl: 'https://raw.githubusercontent.com/lukzfreitas/7-days-of-code-react/b02f304aa60fd638de51bcb3b6a870184969ce01/public/post.svg'
 }
 

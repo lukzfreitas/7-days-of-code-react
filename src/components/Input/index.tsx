@@ -5,10 +5,8 @@ interface InputProps {
     height: number;
     width: number;
     fontSize: string;
-    borderColor: string;
-    border: number;
-    borderRadius: number;
-    outlineColorFocus: string;
+    borderColor: string;    
+    borderRadius: number;    
     backgroundColor: string;
     iconUrl: string;
 }
@@ -19,11 +17,11 @@ const Input = (props: InputProps) => {
         width: ${props.width}px;
         height: ${props.height}px;        
         font-size: ${props.fontSize}; 
-        border: ${props.border} solid ${props.borderColor};        
+        border: 0 solid transparent;        
         border-radius: ${props.borderRadius};
-        margin-left: 60px;
+        margin-left: 20px;
         :focus {
-            outline-color: ${props.outlineColorFocus};            
+            outline-color: transparent;            
         }
     `;
 
@@ -33,19 +31,22 @@ const Input = (props: InputProps) => {
         width: ${props.width + 60}px;
         height: ${props.height}px;        
         background: ${props.backgroundColor};
-        border: ${props.border} solid ${props.borderColor};        
+        border: 0 solid transparent;        
         border-radius: ${props.borderRadius};        
     `;
 
-    const Image = styled.img`
+    const Icon = styled.div`
         display: flex;
         align-items: center;
-        justify-content: center;
-    `;
+        justify-content: flex-end;  
+        margin-left: 20px;
+    `    
 
     return (
         <FormControl>
-            <Image src={props.iconUrl} alt="" height={20} width={20}/>
+            <Icon>
+                <img src={props.iconUrl} alt="" height={30} width={40} />
+            </Icon>
             <Input placeholder={props.placeholder}></Input>
         </FormControl>
     );
