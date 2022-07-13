@@ -33,7 +33,7 @@ const Button = ({
     background-color: ${primary ? '#FFCB47' : 'transparent'};
     box-shadow: ${!primary ? 'rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset' : 'none'};
     font-size: ${size == 'small' ? '12px' : size == 'medium' ? '14px' : '16px'};
-    padding: ${size == 'small' ? '10px 16px' : size == 'medium' ? '11px 20px' : '30px 80px'};
+    padding: ${size == 'small' ? '10px 16px' : size == 'medium' ? '11px 20px' : '30px 26px'};
   `;
 
   return (    
