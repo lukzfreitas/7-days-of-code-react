@@ -9,9 +9,10 @@ const Title = ({
     size = 'large',
     ...props
 }: TitleProps) => {
-    const TitleStyle = styled.h1`
+    const TitleStyle = styled.div`
         font-size: ${size == 'large' ? '82px' : '32px'};
-        font-weight: bold;
+        font-weight: 900;
+        line-height: 94px;
         color: #202020;
     `;
 
