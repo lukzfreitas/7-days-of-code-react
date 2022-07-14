@@ -23,7 +23,7 @@ const Input = ({
     ...props
 }: InputProps) => {
 
-    const Input = styled.input`
+    const InputStyle = styled.input`
         width: ${width}px;
         height: ${height}px;        
         font-size: ${fontSize}; 
@@ -39,7 +39,6 @@ const Input = ({
         display: flex;
         flex-direction: row;        
         width: ${width + 60}px;
-        
         background: ${backgroundColor};
         border: ${border};
         padding: 5px;
@@ -58,7 +57,7 @@ const Input = ({
             <Icon>
                 <img src={props.iconUrl} alt="icon" width={iconWidth} />
             </Icon>
-            <Input placeholder={props.placeholder}></Input>
+            <InputStyle placeholder={props.placeholder}></InputStyle>
         </FormControl>
     );
 }
