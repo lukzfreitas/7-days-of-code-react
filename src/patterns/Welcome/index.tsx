@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ImageComponent from "../../components/Image";
 import Label from "../../components/Typography/Label";
 import Paragraph from "../../components/Typography/Paragraph";
 import Title from "../../components/Typography/Title";
@@ -24,10 +25,10 @@ const Welcome = (props: WelcomeProps) => {
         justify-content: center;        
     `;
 
-    const Image = styled.div`                
-        content: url("https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/plant.png?raw=true");        
-        height: 700px;
-    `;
+    // const Image = styled.div`                
+    //     content: url("https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/plant.png?raw=true");        
+    //     height: 700px;
+    // `;
 
     const Column = styled.div`
         display: flex;
@@ -46,7 +47,7 @@ const Welcome = (props: WelcomeProps) => {
                 <Paragraph text={props.text} />
                 <Newsletter />
             </Column>
-            <Image></Image>
+            <ImageComponent src="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/plant.png?raw=true" height={700} alt="welcome"></ImageComponent>
         </Row>
     )
 }
