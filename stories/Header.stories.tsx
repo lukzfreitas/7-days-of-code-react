@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Header from '../src/components/Navigation/Header';
+import Header from '../src/components/Surfaces/Header';
 
 
 

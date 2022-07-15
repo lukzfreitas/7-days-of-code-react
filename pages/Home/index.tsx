@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import Header from "../../src/components/Navigation/Header";
+import Header from "../../src/components/Surfaces/Header";
+import Label from "../../src/components/Typography/Label";
 import MyPlant from "../../src/patterns/MyPlant";
 import Newsletter from "../../src/patterns/Newsletter";
 import Welcome from "../../src/patterns/Welcome";
@@ -24,6 +25,14 @@ export const Home = (props: HomeProps) => {
         display: flex;
         align-items: flex-start;
         justify-content: center;
+        margin-top: 20px;
+    `;
+
+    const SaleStyle = styled.div`
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 40px;
     `;
     
     return (
@@ -38,6 +47,9 @@ export const Home = (props: HomeProps) => {
             <MyPlantStyle>
                 <MyPlant prefixTitle="Como conseguir" title="minha planta" />
             </MyPlantStyle>
+            <SaleStyle>
+                <Label text="Conheça nossas"></Label>
+            </SaleStyle>
         </Body>
     );
 };

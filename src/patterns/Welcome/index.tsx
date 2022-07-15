@@ -25,11 +25,6 @@ const Welcome = (props: WelcomeProps) => {
         justify-content: center;        
     `;
 
-    // const Image = styled.div`                
-    //     content: url("https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/plant.png?raw=true");        
-    //     height: 700px;
-    // `;
-
     const Column = styled.div`
         display: flex;
         flex-direction: column;
@@ -47,7 +42,10 @@ const Welcome = (props: WelcomeProps) => {
                 <Paragraph text={props.text} />
                 <Newsletter />
             </Column>
-            <ImageComponent src="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/plant.png?raw=true" height={700} alt="welcome"></ImageComponent>
+            <ImageComponent 
+                src="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/plant.png?raw=true" 
+                height={700} 
+                alt="welcome" />
         </Row>
     )
 }
