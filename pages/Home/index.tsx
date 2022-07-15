@@ -17,7 +17,7 @@ export const Home = (props: HomeProps) => {
     `
 
     const WelcomeStyle = styled.div`
-        margin: 50px;
+        margin-inline: 300px;
     `;
 
     const MyPlantStyle = styled.div`
