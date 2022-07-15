@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ImageComponent from "../../components/Image";
-import Item from "../../components/Item";
+import ImageComponent from "../../components/DataDisplay/Image";
+import Item from "../../components/DataDisplay/Item";
 import Label from "../../components/Typography/Label";
 import Title from "../../components/Typography/Title";
 

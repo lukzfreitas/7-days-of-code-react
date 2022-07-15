@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Header from "../../src/components/Header";
+import Header from "../../src/components/Navigation/Header";
 import MyPlant from "../../src/patterns/MyPlant";
 import Newsletter from "../../src/patterns/Newsletter";
 import Welcome from "../../src/patterns/Welcome";

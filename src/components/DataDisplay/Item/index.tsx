@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Label from "../Typography/Label";
+import Label from "../../Typography/Label";
 
 interface ItemProps {
     text: string;

@@ -33,6 +33,14 @@ const Input = ({
         :focus {
             outline-color: transparent;            
         }
+        ::placeholder {
+            color: #202020;
+            opacity: 0.3;
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 400;
+            font-style: normal;
+        }
     `;
 
     const FormControl = styled.form`

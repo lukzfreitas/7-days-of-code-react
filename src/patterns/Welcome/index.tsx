@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ImageComponent from "../../components/Image";
+import ImageComponent from "../../components/DataDisplay/Image";
 import Label from "../../components/Typography/Label";
 import Paragraph from "../../components/Typography/Paragraph";
 import Title from "../../components/Typography/Title";

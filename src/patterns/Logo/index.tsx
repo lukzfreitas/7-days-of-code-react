@@ -1,4 +1,4 @@
-import ImageComponent from "../../components/Image";
+import ImageComponent from "../../components/DataDisplay/Image";
 
 
 interface LogoProps {
