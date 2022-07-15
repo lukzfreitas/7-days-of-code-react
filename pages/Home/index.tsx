@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Header from "../../src/components/Surfaces/Header";
-import Label from "../../src/components/Typography/Label";
 import MyPlant from "../../src/patterns/MyPlant";
-import Newsletter from "../../src/patterns/Newsletter";
+import Sale from "../../src/patterns/Sale";
 import Welcome from "../../src/patterns/Welcome";
 
 interface HomeProps {
@@ -12,9 +11,10 @@ interface HomeProps {
 export const Home = (props: HomeProps) => {
 
     const Body = styled.body`
-        padding: 0;
-        margin: 0;        
-        background-image: url("https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/background.png?raw=true");        
+        height: 100%;        
+        background-color: #f8f6f6;
+        background-position: center top;
+        background-size: 100% auto;
     `
 
     const WelcomeStyle = styled.div`
@@ -25,16 +25,17 @@ export const Home = (props: HomeProps) => {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        margin-top: 20px;
+        margin-inline: 300px;
     `;
 
     const SaleStyle = styled.div`
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         margin-top: 40px;
+        margin-inline: 300px;
     `;
-    
+
     return (
         <Body>
             <Header></Header>
@@ -48,7 +49,7 @@ export const Home = (props: HomeProps) => {
                 <MyPlant prefixTitle="Como conseguir" title="minha planta" />
             </MyPlantStyle>
             <SaleStyle>
-                <Label text="Conheça nossas"></Label>
+                <Sale prefixTitle='Conheça nossa' title='Ofertas' />
             </SaleStyle>
         </Body>
     );

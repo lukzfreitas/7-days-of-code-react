@@ -15,6 +15,8 @@ const MyPlant = (props: MyPlantProps) => {
         display: flex;        
         align-items: flex-start;
         justify-content: flex-start;        
+        background-color: #FFFFFF;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     `;
 
     const Column = styled.div`
@@ -22,11 +24,11 @@ const MyPlant = (props: MyPlantProps) => {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;        
-        padding: 20px;
+        padding: 20px;        
     `;
 
     const ItemStyle = styled.div`
-        margin-top: 50px;
+        margin-top: 40px;
     `;
 
     const items = [
@@ -40,7 +42,7 @@ const MyPlant = (props: MyPlantProps) => {
             <ImageComponent
                 src="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/myPlant.png?raw=true"
                 alt='minha planta'
-                width={500} />
+                width={460} />
             <Column>
                 <Label text={props.prefixTitle} />
                 <Title label={props.title} size="medium" />

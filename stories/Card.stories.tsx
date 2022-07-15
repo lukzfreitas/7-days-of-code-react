@@ -17,7 +17,8 @@ export const TitleTemplate = Template.bind({});
 TitleTemplate.args = {
     title: 'Ajuga reptans',
     subtitle: 'R$ 20,00',
-    textButton: 'Comprar'
+    textButton: 'Comprar',
+    imgUrl: "https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
 }
 
 

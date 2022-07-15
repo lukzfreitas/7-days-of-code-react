@@ -8,6 +8,7 @@ interface CardProps {
     title: string;
     subtitle: string;
     textButton: string;
+    imgUrl: string;
 }
 
 const Card = (props: CardProps) => {
@@ -17,26 +18,43 @@ const Card = (props: CardProps) => {
         align-items: flex-start;
         justify-content: flex-start;
         background-color: #ffffff;
-        width: 380px;
-        height: 200px;  
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+        width: 400px;
+        height: 250px;
     `;
 
     const Column = styled.div`
         display: flex;        
+        flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;
-        background-color: #ffffff;
-        width: 380px;
-        height: 200px;  
+        justify-content: flex-start;      
     `;
+
+    const TitleStyle = styled.div`
+        margin-top: 20px;
+    `
+
+    const LabelStyle = styled.div`
+        margin-top: 10px;
+    `
+
+    const ButtonStyle = styled.div`
+        margin-top: 30px;   
+    `
 
     return (
         <Row>
-            <ImageComponent src=""/>
+            <ImageComponent src={props.imgUrl} />
             <Column>
-                <Title label={props.title} size="medium" />
-                <Label text={props.subtitle} />
-                <Button label="Comprar" primary={false} />
+                <TitleStyle>
+                    <Title label={props.title} size="medium" />
+                </TitleStyle>
+                <LabelStyle>
+                    <Label text={props.subtitle} />
+                </LabelStyle>
+                <ButtonStyle>
+                    <Button label="Comprar" primary={false} />
+                </ButtonStyle>
             </Column>
         </Row>
     );
