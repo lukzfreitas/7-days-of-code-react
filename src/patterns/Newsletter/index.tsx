@@ -3,7 +3,7 @@ import Button from "../../components/Inputs/Button";
 import Input from "../../components/Inputs/Input";
 
 interface NewsletterProps {
-
+    
 }
 
 const Newsletter = (props: NewsletterProps) => {
@@ -16,7 +16,8 @@ const Newsletter = (props: NewsletterProps) => {
 
     return (
         <Row>
-            <Input                
+            <Input
+                height={'65px'}                
                 width={'320px'}
                 placeholder="Insira seu e-mail"
                 iconWidth={30}

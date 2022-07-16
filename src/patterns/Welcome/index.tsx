@@ -42,10 +42,10 @@ const Welcome = (props: WelcomeProps) => {
                     <Newsletter />
                 </NewsletterStyle>
             </Column>
-            <ImageComponent
+            {/* <ImageComponent
                 src="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/plant.png?raw=true"
                 height={700}
-                alt="welcome" />
+                alt="welcome" /> */}
         </Row>
     )
 }

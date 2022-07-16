@@ -23,10 +23,6 @@ const Sale = (props: SaleProps) => {
         justify-content: flex-start;        
     `;
 
-    const CardStyle = styled.div`
-        margin: 20px;
-    `
-
     return (
         <Column>
             <Label text={props.prefixTitle}></Label>

@@ -13,7 +13,7 @@ interface InputProps {
 }
 
 const Input = ({
-    height = '75px',
+    height = '64px',
     width = '390px',
     fontSize = '16pt',
     borderRadius = 4,    
@@ -45,7 +45,8 @@ const Input = ({
 
     const FormControl = styled.form`
         display: flex;
-        flex-direction: row;        
+        flex-direction: row;
+        height: ${height};
         width: ${width + 60}px;
         background: ${backgroundColor};
         border: ${border};
