@@ -19,7 +19,7 @@ export const Home = (props: HomeProps) => {
     `
 
     const WelcomeStyle = styled.div`
-        margin-inline: ${Px2vw(150)};
+        margin-inline: ${Px2vw(220)};
     `;
 
     const MyPlantStyle = styled.div`
@@ -33,6 +33,7 @@ export const Home = (props: HomeProps) => {
         align-items: center;
         justify-content: center;
         margin-top: 40px;
+        margin-inline: ${Px2vw(220)};
     `;
 
     return (
