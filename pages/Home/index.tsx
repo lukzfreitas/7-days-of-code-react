@@ -3,6 +3,7 @@ import Header from "../../src/components/Surfaces/Header";
 import MyPlant from "../../src/patterns/MyPlant";
 import Sale from "../../src/patterns/Sale";
 import Welcome from "../../src/patterns/Welcome";
+import Px2vw from "../../src/utils/Px2vw";
 
 interface HomeProps {
 
@@ -18,14 +19,13 @@ export const Home = (props: HomeProps) => {
     `
 
     const WelcomeStyle = styled.div`
-        margin-inline: 300px;
+        margin-inline: ${Px2vw(150)};
     `;
 
     const MyPlantStyle = styled.div`
         display: flex;
         align-items: flex-start;
-        justify-content: center;
-        margin-inline: 300px;
+        justify-content: center;        
     `;
 
     const SaleStyle = styled.div`
@@ -33,7 +33,6 @@ export const Home = (props: HomeProps) => {
         align-items: center;
         justify-content: center;
         margin-top: 40px;
-        margin-inline: 300px;
     `;
 
     return (

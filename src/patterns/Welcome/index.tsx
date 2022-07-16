@@ -19,12 +19,6 @@ const Welcome = (props: WelcomeProps) => {
         justify-content: flex-start;        
     `;
 
-    const Row2 = styled.div`
-        display: flex;        
-        align-items: flex-start;
-        justify-content: center;        
-    `;
-
     const Column = styled.div`
         display: flex;
         flex-direction: column;
@@ -34,17 +28,23 @@ const Welcome = (props: WelcomeProps) => {
         height: 462px;
     `;
 
+    const NewsletterStyle = styled.div`
+        height: 75px;
+    `;
+
     return (
         <Row>
             <Column>
                 <Label text={props.prefixTitle} />
                 <Title label={props.title} />
                 <Paragraph text={props.text} />
-                <Newsletter />
+                <NewsletterStyle>
+                    <Newsletter />
+                </NewsletterStyle>
             </Column>
-            <ImageComponent 
-                src="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/plant.png?raw=true" 
-                height={700} 
+            <ImageComponent
+                src="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/plant.png?raw=true"
+                height={700}
                 alt="welcome" />
         </Row>
     )

@@ -32,56 +32,44 @@ const Sale = (props: SaleProps) => {
             <Label text={props.prefixTitle}></Label>
             <Title label={props.title}></Title>
             <Row>
-                <CardStyle>
-                    <Card
-                        title='Ajuga reptans'
-                        subtitle='R$ 20,00'
-                        textButton='Comprar'
-                        imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
-                    />
-                </CardStyle>
-                <CardStyle>
-                    <Card
-                        title='Ajuga reptans'
-                        subtitle='R$ 20,00'
-                        textButton='Comprar'
-                        imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
-                    />
-                </CardStyle>
-                <CardStyle>
-                    <Card
-                        title='Ajuga reptans'
-                        subtitle='R$ 20,00'
-                        textButton='Comprar'
-                        imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
-                    />
-                </CardStyle>
+                <Card
+                    title='Ajuga reptans'
+                    subtitle='R$ 20,00'
+                    textButton='Comprar'
+                    imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
+                />
+                <Card
+                    title='Ajuga reptans'
+                    subtitle='R$ 20,00'
+                    textButton='Comprar'
+                    imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
+                />
+                <Card
+                    title='Ajuga reptans'
+                    subtitle='R$ 20,00'
+                    textButton='Comprar'
+                    imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
+                />
             </Row>
             <Row>
-                <CardStyle>
-                    <Card
-                        title='Ajuga reptans'
-                        subtitle='R$ 20,00'
-                        textButton='Comprar'
-                        imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
-                    />
-                </CardStyle>
-                <CardStyle>
-                    <Card
-                        title='Ajuga reptans'
-                        subtitle='R$ 20,00'
-                        textButton='Comprar'
-                        imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
-                    />
-                </CardStyle>
-                <CardStyle>
-                    <Card
-                        title='Ajuga reptans'
-                        subtitle='R$ 20,00'
-                        textButton='Comprar'
-                        imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
-                    />
-                </CardStyle>
+                <Card
+                    title='Ajuga reptans'
+                    subtitle='R$ 20,00'
+                    textButton='Comprar'
+                    imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
+                />
+                <Card
+                    title='Ajuga reptans'
+                    subtitle='R$ 20,00'
+                    textButton='Comprar'
+                    imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
+                />
+                <Card
+                    title='Ajuga reptans'
+                    subtitle='R$ 20,00'
+                    textButton='Comprar'
+                    imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
+                />
             </Row>
         </Column>
     );

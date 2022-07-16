@@ -15,8 +15,8 @@ const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 export const InputNewsletter = Template.bind({});
 InputNewsletter.args = {
     placeholder: 'Insira seu e-mail',
-    height: 75,
-    width: 390,
+    height: '75px',
+    width: '390px',
     fontSize: '16pt',
     backgroundColor: '#ffffff',
     border: '1px solid #2b2828',

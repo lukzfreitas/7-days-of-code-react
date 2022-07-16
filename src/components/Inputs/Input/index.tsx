@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 interface InputProps {
     placeholder: string;
-    height?: number;
-    width?: number;
+    height?: string;
+    width?: string;
     fontSize?: string;    
     borderRadius?: number;
     backgroundColor?: string;
@@ -13,8 +13,8 @@ interface InputProps {
 }
 
 const Input = ({
-    height = 75,
-    width = 390,
+    height = '75px',
+    width = '390px',
     fontSize = '16pt',
     borderRadius = 4,    
     iconWidth = 40,

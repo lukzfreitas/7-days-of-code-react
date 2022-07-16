@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Px2vw from "../../../utils/Px2vw";
 import ImageComponent from "../../DataDisplay/Image";
 import Button from "../../Inputs/Button";
 import Label from "../../Typography/Label";
@@ -9,6 +10,7 @@ interface CardProps {
     subtitle: string;
     textButton: string;
     imgUrl: string;
+    width?: number;
 }
 
 const Card = (props: CardProps) => {
@@ -19,8 +21,9 @@ const Card = (props: CardProps) => {
         justify-content: flex-start;
         background-color: #ffffff;
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-        width: 400px;
-        height: 250px;
+        width: ${Px2vw(props.width || 450)};
+        height: 300;
+        margin: 10px;
     `;
 
     const Column = styled.div`
@@ -28,6 +31,7 @@ const Card = (props: CardProps) => {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;      
+        margin: 10px;
     `;
 
     const TitleStyle = styled.div`

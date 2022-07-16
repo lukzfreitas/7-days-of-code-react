@@ -29,6 +29,7 @@ const Button = ({
     cursor: pointer;
     display: inline-block;
     line-height: 1;
+    height: 100%;
     color: ${primary ? '#FFFFFF' : '#FFCB47'};
     background-color: ${primary ? '#FFCB47' : 'none'};
     box-shadow: ${!primary ? 'none' : 'none'};
