@@ -22,10 +22,9 @@ const Card = (props: CardProps) => {
         align-items: flex-start;
         justify-content: flex-start;
         background-color: #ffffff;
-        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-        width: ${Px2vw(props.width || 450)};
-        height: ${props.height || 300};
-        margin: 10px;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);        
+        width: ${props.width || '100%'};
+        height: ${props.height || '100%'};
     `;
 
     const Column = styled.div`
