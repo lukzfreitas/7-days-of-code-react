@@ -32,7 +32,6 @@ const Newsletter = (props: NewsletterProps) => {
         <>
             <ImageStyle></ImageStyle>
             <Row>
-
                 <Input
                     height={'65px'}
                     width={'320px'}

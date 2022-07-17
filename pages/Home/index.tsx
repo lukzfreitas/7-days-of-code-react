@@ -13,12 +13,21 @@ export const Home = (props: HomeProps) => {
 
     const Body = styled.body`
         height: 100%;        
+        width: 100%;
         background-color: #f8f6f6;
         background-position: center top;
-        background-size: 100% auto;
+        background-size: 100% auto;        
+    `
+
+    const HeaderStyle = styled.div`
+        position: relative;
+        z-index: 1;
     `
 
     const WelcomeStyle = styled.div`
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;        
         margin-inline: ${Px2vw(220)};
     `;
 
@@ -38,7 +47,9 @@ export const Home = (props: HomeProps) => {
 
     return (
         <Body>
-            <Header></Header>
+            <HeaderStyle>
+                <Header></Header>
+            </HeaderStyle>
             <WelcomeStyle>
                 <Welcome
                     prefixTitle="Sua casa com as"
