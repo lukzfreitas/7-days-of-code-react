@@ -13,7 +13,10 @@ export default {
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
 export const InputNewsletter = Template.bind({});
+
 InputNewsletter.args = {
+    id: 'test',
+    value: 'teste',
     placeholder: 'Insira seu e-mail',
     height: '75px',
     width: '390px',

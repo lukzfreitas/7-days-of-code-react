@@ -30,12 +30,12 @@ const Button = ({
     cursor: pointer;
     display: inline-block;
     line-height: 1;
-    height: 100%;
+    /* height: 100%; */
     color: ${primary ? '#FFFFFF' : '#FFCB47'};
     background-color: ${primary ? '#FFCB47' : 'none'};
     box-shadow: ${!primary ? 'none' : 'none'};
     font-size: ${size == 'small' ? '12px' : size == 'medium' ? '14px' : '16px'};
-    padding: ${size == 'small' ? '10px 16px' : size == 'medium' ? '11px 20px' : '30px 26px'};
+    padding: ${size == 'small' ? '10px 16px' : size == 'medium' ? '11px 20px' : '26px 26px'};
   `;
 
   return (    

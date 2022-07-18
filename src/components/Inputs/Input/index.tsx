@@ -1,24 +1,30 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import Button from "../Button";
 
 interface InputProps {
-    placeholder: string;
+    id: string;
+    value?: string;
+    placeholder?: string;
     height?: string;
     width?: string;
-    fontSize?: string;    
+    fontSize?: string;
     borderRadius?: number;
     backgroundColor?: string;
     border?: string;
     iconUrl?: string;
     iconWidth?: number;
+    type?: "text" | "button" | "checkbox" | "search" | "date" | "email" | "file" | "hidden" | "password" | "submit" | "tel" | "number"
 }
 
 const Input = ({
+    value = 'ola',
     height = '64px',
     width = '390px',
     fontSize = '16pt',
-    borderRadius = 4,    
+    borderRadius = 4,
     iconWidth = 40,
-    border = '0',    
+    border = '0',
     backgroundColor = '#ffffff',
     ...props
 }: InputProps) => {
@@ -50,7 +56,6 @@ const Input = ({
         width: ${width + 60}px;
         background: ${backgroundColor};
         border: ${border};
-        padding: 5px;
         border-radius: ${borderRadius};        
     `;
 
@@ -59,14 +64,35 @@ const Input = ({
         align-items: center;
         justify-content: flex-end;  
         margin-left: 20px;
-    `
+    `;
+
+    const [text, setText] = useState(value);
+
+    const [valid, setValid] = useState(false);
+
+    // useEffect(() => {        
+    //     setText(value);
+    //     setValid(valid);
+    // })
+
+    const handleChangeValue = (event: any) => {        
+        setValid(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(event.target.value))
+        console.log(valid);
+    }
 
     return (
         <FormControl>
             <Icon>
                 <img src={props.iconUrl} alt="icon" width={iconWidth} />
             </Icon>
-            <InputStyle placeholder={props.placeholder}></InputStyle>
+            <InputStyle
+                // value={text}
+                id={props.id}
+                onChange={e => handleChangeValue(e)}
+                placeholder={props.placeholder}
+                type={props.type}
+            />
+            <Button label="Assinar newsletter" size="large" primary={valid}></Button>
         </FormControl>
     );
 }

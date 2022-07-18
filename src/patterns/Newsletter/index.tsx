@@ -33,13 +33,14 @@ const Newsletter = (props: NewsletterProps) => {
             <ImageStyle></ImageStyle>
             <Row>
                 <Input
+                    id={'newsletter'}
                     height={'65px'}
                     width={'320px'}
                     placeholder="Insira seu e-mail"
                     iconWidth={30}
+                    type='email'
                     iconUrl="https://raw.githubusercontent.com/lukzfreitas/7-days-of-code-react/b02f304aa60fd638de51bcb3b6a870184969ce01/public/post.svg"
-                ></Input>
-                <Button label="Assinar newsletter" size="large" primary={true}></Button>
+                ></Input>                
             </Row>
         </>
     );
