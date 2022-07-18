@@ -68,8 +68,7 @@ const Input = ({
 
     const handleChangeValue = (event: any) => {
         setValid(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(event.target.value))
-        setText(event.target.value)
-        console.log(valid);
+        setText(event.target.value);
     }
 
     return (
@@ -83,7 +82,7 @@ const Input = ({
                 placeholder={props.placeholder}
                 type={props.type}
             />
-            <Button label="Assinar newsletter" size="large" primary={valid}></Button>
+            <Button label="Assinar newsletter" size="large" disabled={!valid} primary={true}></Button>
         </FormControl>
     );
 }
