@@ -17,66 +17,58 @@ interface InputProps {
     type?: "text" | "button" | "checkbox" | "search" | "date" | "email" | "file" | "hidden" | "password" | "submit" | "tel" | "number"
 }
 
-const Input = ({
-    value = 'ola',
-    height = '64px',
-    width = '390px',
-    fontSize = '16pt',
-    borderRadius = 4,
-    iconWidth = 40,
-    border = '0',
-    backgroundColor = '#ffffff',
-    ...props
-}: InputProps) => {
+const InputStyle = styled.input`
+    width: 100%;
+    height: 68px;        
+    font-size: 16px; 
+    border: transparent;        
+    border-radius: 4;    
+    :focus {
+        outline-color: transparent;            
+        outline-width: 0;
+    }
+    ::placeholder {
+        color: #202020;
+        opacity: 0.3;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 400;
+        font-style: normal;
+    }
+`;
 
-    const InputStyle = styled.input`
-        width: ${width}px;
-        height: ${height}px;        
-        font-size: ${fontSize}; 
-        border: transparent;        
-        border-radius: ${borderRadius};
-        margin-left: 20px;
-        :focus {
-            outline-color: transparent;            
-        }
-        ::placeholder {
-            color: #202020;
-            opacity: 0.3;
-            font-size: 16px;
-            line-height: 30px;
-            font-weight: 400;
-            font-style: normal;
-        }
-    `;
-
-    const FormControl = styled.form`
+const FormControl = styled.div`
         display: flex;
         flex-direction: row;
-        height: ${height};
-        width: ${width + 60}px;
-        background: ${backgroundColor};
-        border: ${border};
-        border-radius: ${borderRadius};        
+        height: 70px;
+        width: 100%;        
+        border: 0;
+        border-radius: 4;        
     `;
 
-    const Icon = styled.div`
+const Icon = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-end;  
-        margin-left: 20px;
+        padding: 20px;
+        background-color: #ffffff;
     `;
+
+
+const Input = ({
+    value = '',    
+    iconWidth = 40,    
+    ...props
+}: InputProps) => {
 
     const [text, setText] = useState(value);
 
     const [valid, setValid] = useState(false);
 
-    // useEffect(() => {        
-    //     setText(value);
-    //     setValid(valid);
-    // })
 
-    const handleChangeValue = (event: any) => {        
+    const handleChangeValue = (event: any) => {
         setValid(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(event.target.value))
+        setText(event.target.value)
         console.log(valid);
     }
 
@@ -86,8 +78,7 @@ const Input = ({
                 <img src={props.iconUrl} alt="icon" width={iconWidth} />
             </Icon>
             <InputStyle
-                // value={text}
-                id={props.id}
+                value={text}                
                 onChange={e => handleChangeValue(e)}
                 placeholder={props.placeholder}
                 type={props.type}

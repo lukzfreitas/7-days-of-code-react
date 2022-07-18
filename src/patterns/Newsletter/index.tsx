@@ -33,9 +33,7 @@ const Newsletter = (props: NewsletterProps) => {
             <ImageStyle></ImageStyle>
             <Row>
                 <Input
-                    id={'newsletter'}
-                    height={'65px'}
-                    width={'320px'}
+                    id={'newsletter'}                    
                     placeholder="Insira seu e-mail"
                     iconWidth={30}
                     type='email'
