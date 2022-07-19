@@ -4,9 +4,7 @@ interface ParagraphProps {
     text: string;
 }
 
-const Paragraph = (props: ParagraphProps) => {
-
-    const ParagraphStyle = styled.p`
+const ParagraphStyle = styled.p`
         font-size: 16px;
         line-height: 26px;
         font-weight: 400;
@@ -15,6 +13,7 @@ const Paragraph = (props: ParagraphProps) => {
         opacity: 0.5;        
     `;
 
+const Paragraph = (props: ParagraphProps) => {
     return (
         <ParagraphStyle>
             {props.text}
