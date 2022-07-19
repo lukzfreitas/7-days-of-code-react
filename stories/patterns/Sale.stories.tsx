@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Sale from '../src/patterns/Sale';
+import Sale from '../../src/patterns/Sale';
 
 export default {
   title: 'Example/Sale',

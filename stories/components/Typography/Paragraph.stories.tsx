@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Paragraph from '../src/components/Typography/Paragraph';
+import Paragraph from '../../../src/components/Typography/Paragraph';
 
 export default {
     title: 'Example/Paragraph',

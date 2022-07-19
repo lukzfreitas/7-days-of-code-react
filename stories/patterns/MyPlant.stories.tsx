@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import MyPlant from '../src/patterns/MyPlant';
+import MyPlant from '../../src/patterns/MyPlant';
 
 export default {
   title: 'Example/MyPlant',

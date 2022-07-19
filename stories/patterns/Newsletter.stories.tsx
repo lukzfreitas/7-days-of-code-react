@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Newsletter from '../src/patterns/Newsletter';
+import Newsletter from '../../src/patterns/Newsletter';
 
 export default {
   title: 'Example/Newsletter',

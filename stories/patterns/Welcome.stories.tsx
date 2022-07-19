@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Welcome from '../src/patterns/Welcome';
+import Welcome from '../../src/patterns/Welcome';
 
 export default {
   title: 'Example/Welcome',

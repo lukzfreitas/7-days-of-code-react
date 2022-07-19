@@ -1,8 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Header from '../src/components/Surfaces/Header';
-
-
+import Header from '../../../src/components/Surfaces/Header';
 
 
 export default {

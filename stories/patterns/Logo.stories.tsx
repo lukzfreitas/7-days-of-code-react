@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Logo from '../src/patterns/Logo';
+import Logo from '../../src/patterns/Logo';
 
 
 export default {

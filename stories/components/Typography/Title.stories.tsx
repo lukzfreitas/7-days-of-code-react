@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Title from '../src/components/Typography/Title';
+import Title from '../../../src/components/Typography/Title';
 
 export default {
   title: 'Example/Title',
