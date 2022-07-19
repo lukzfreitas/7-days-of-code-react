@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 interface ButtonProps {
@@ -23,7 +22,7 @@ const ButtonStyle = styled.div((props: { disabled: boolean, primary: boolean, si
   cursor: props.disabled ? 'auto' : 'pointer',
   display: 'inline-block',
   lineHeight: 1,
-  width: '300px',
+  width: '320px',
   color: props.disabled ? '#FFFFFF' : props.primary ? '#FFFFFF' : '#FFCB47',
   backgroundColor: props.disabled ? '#979795' : props.primary ? '#FFCB47' : 'none',
   boxShadow: 'none',
@@ -38,7 +37,7 @@ const Button = ({
   backgroundColor,
   label,
   ...props
-}: ButtonProps) => {
+}: ButtonProps) => {  
 
   const handleClick = () => {
     if (disabled) return;

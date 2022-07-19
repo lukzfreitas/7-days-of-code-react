@@ -65,10 +65,9 @@ const Input = ({
 
     const [valid, setValid] = useState(false);
 
-
     const handleChangeValue = (event: any) => {
         setValid(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(event.target.value))
-        setText(event.target.value);
+        setText(event.target.value);        
     }
 
     return (

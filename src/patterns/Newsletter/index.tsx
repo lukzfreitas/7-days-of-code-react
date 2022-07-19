@@ -6,7 +6,7 @@ interface NewsletterProps {
 
 }
 
-const ImageStyle = styled.image`
+const ImageStyle = styled.div`
         content: url('https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/plant.png?raw=true');
         position: absolute;
         height: 526px;

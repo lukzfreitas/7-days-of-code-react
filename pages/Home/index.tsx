@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Header from "../../src/components/Surfaces/Header";
+import Label from "../../src/components/Typography/Label";
 import MyPlant from "../../src/patterns/MyPlant";
 import Sale from "../../src/patterns/Sale";
 import Welcome from "../../src/patterns/Welcome";
@@ -9,7 +10,7 @@ interface HomeProps {
 
 };
 
-const Body = styled.body`
+const Body = styled.div`
         height: 100%;        
         width: 100%;
         background-color: #f8f6f6;
@@ -44,12 +45,12 @@ const SaleStyle = styled.div`
     `;
 
 export const Home = (props: HomeProps) => {
-    return (
+    return (        
         <Body>
             <HeaderStyle>
                 <Header></Header>
             </HeaderStyle>
-            <WelcomeStyle>
+            <WelcomeStyle>                
                 <Welcome
                     prefixTitle="Sua casa com as"
                     title="melhores plantas"

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import ImageComponent from "../../DataDisplay/Image";
 import Button from "../../Inputs/Button";
@@ -20,8 +21,8 @@ const Row = styled.div((props: { height: string, width: string }) => ({
     justifyContent: 'flex-start',
     backgroundColor: '#ffffff',
     boxShadow: '10px 10px 30px rgba(0, 0, 0, 0.06)',
-    width: props.width || '100%',
-    height: props.height || '100%',
+    width: props.width,
+    height: props.height
 }));
 
 const Column = styled.div((props: { margin: number }) => ({
@@ -50,10 +51,21 @@ const Card = ({
     margin = 10,
     ...props
 }: CardProps) => {
+
+    const [widthValue, setWidthValue] = useState(width);
+    const [heightValue, setHeightValue] = useState(height);
+    const [marginValue, setMarginValue] = useState(margin);
+
+    useEffect(() => {
+        setWidthValue(width);
+        setHeightValue(height);
+        setMarginValue(margin);
+    }, [])
+
     return (
-        <Row width={width} height={height} >
+        <Row width={widthValue} height={heightValue} >
             <ImageComponent src={props.imgUrl} />
-            <Column margin={margin}>
+            <Column margin={marginValue}>
                 <TitleStyle>
                     <Title label={props.title} size="medium" />
                 </TitleStyle>

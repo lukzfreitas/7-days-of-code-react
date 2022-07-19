@@ -35,7 +35,7 @@ const Menu = (props: MenuProps) => {
         <>
             {props.links.map(((link, index) => {
                 return (
-                    <Row>
+                    <Row key={index}>
                         <Column>
                             <Link
                                 label={link.label}

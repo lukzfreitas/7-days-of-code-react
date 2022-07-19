@@ -47,9 +47,9 @@ const MyPlant = (props: MyPlantProps) => {
                 <Label text={props.prefixTitle} />
                 <Title label={props.title} size="medium" />
 
-                {items.map((item) => {
+                {items.map((item, index) => {
                     return (
-                        <ItemStyle>
+                        <ItemStyle key={index}>
                             <Item text={item}></Item>
                         </ItemStyle>
                     )
