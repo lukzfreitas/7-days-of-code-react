@@ -15,11 +15,7 @@ interface HeaderProps {
   onCreateAccount?: () => void;
 }
 
-
-
-const Header = (props: HeaderProps) => {
-
-  const Row = styled.div`
+const Row = styled.div`
       font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;      
       padding: 15px 20px;
       display: flex;      
@@ -32,6 +28,8 @@ const Header = (props: HeaderProps) => {
       align-items: flex-start;
       justify-content: space-between;
   `;
+
+const Header = (props: HeaderProps) => {  
 
   const links = [
     { label: 'Como Fazer', visited: false, onClick: () => { } },

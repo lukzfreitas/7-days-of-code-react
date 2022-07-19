@@ -6,20 +6,22 @@ interface LinkProps {
     onClick: Function;
 }
 
+const LabelStyled = styled.p((props: { visited: boolean }) => ({
+    fontSize: '16pt',
+    color: '#202020',
+    cursor: props.visited ? 'auto' : 'pointer',
+    fontWeight: props.visited ? 'bold' : 'normal',
+    ":hover": {
+        color: props.visited ? '#202020' : '#8DCE97'
+    }
+}));
+
 const Link = (props: LinkProps) => {
 
-    const Label = styled.p`
-        font-size: 16pt;
-        color: #202020;
-        cursor: ${props.visited ? 'auto' : 'pointer'};
-        font-weight: ${props.visited ? 'bold' : 'nomal'};        
-        &:hover {
-            color: ${props.visited ? '#202020' : '#8DCE97'};
-        }
-    `;
-
     return (
-        <Label onClick={() => props.onClick()}>{props.label}</Label>
+        <LabelStyled visited={props.visited} onClick={() => props.onClick()}>
+            {props.label}
+        </LabelStyled>
     );
 }
 

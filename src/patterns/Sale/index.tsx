@@ -8,22 +8,20 @@ interface SaleProps {
     title: string;
 }
 
-const Sale = (props: SaleProps) => {
-
-    const Row = styled.div`
+const Row = styled.div`
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;        
     `
 
-    const Column = styled.div`
+const Column = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;        
     `;
 
-    const Column_3 = styled.div`
+const Column_3 = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -32,6 +30,7 @@ const Sale = (props: SaleProps) => {
         margin: 10px;
     `
 
+const Sale = (props: SaleProps) => {
     return (
         <Column>
             <Label text={props.prefixTitle}></Label>
@@ -60,7 +59,7 @@ const Sale = (props: SaleProps) => {
                         textButton='Comprar'
                         imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
                     />
-                </Column_3>                
+                </Column_3>
             </Row>
             <Row>
                 <Column_3>
@@ -86,7 +85,7 @@ const Sale = (props: SaleProps) => {
                         textButton='Comprar'
                         imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
                     />
-                </Column_3>                
+                </Column_3>
             </Row>
         </Column>
     );

@@ -9,9 +9,7 @@ interface HomeProps {
 
 };
 
-export const Home = (props: HomeProps) => {
-
-    const Body = styled.body`
+const Body = styled.body`
         height: 100%;        
         width: 100%;
         background-color: #f8f6f6;
@@ -19,25 +17,25 @@ export const Home = (props: HomeProps) => {
         background-size: 100% auto;        
     `
 
-    const HeaderStyle = styled.div`
+const HeaderStyle = styled.div`
         position: relative;
         z-index: 1;
     `
 
-    const WelcomeStyle = styled.div`
+const WelcomeStyle = styled.div`
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;        
         margin-inline: ${Px2vw(220)};
     `;
 
-    const MyPlantStyle = styled.div`
+const MyPlantStyle = styled.div`
         display: flex;
         align-items: flex-start;
         justify-content: center;        
     `;
 
-    const SaleStyle = styled.div`
+const SaleStyle = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
@@ -45,6 +43,7 @@ export const Home = (props: HomeProps) => {
         margin-inline: ${Px2vw(220)};
     `;
 
+export const Home = (props: HomeProps) => {
     return (
         <Body>
             <HeaderStyle>

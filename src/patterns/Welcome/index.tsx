@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import ImageComponent from "../../components/DataDisplay/Image";
 import Label from "../../components/Typography/Label";
 import Paragraph from "../../components/Typography/Paragraph";
 import Title from "../../components/Typography/Title";
@@ -11,15 +10,13 @@ interface WelcomeProps {
     text: string;
 }
 
-const Welcome = (props: WelcomeProps) => {
-
-    const Row = styled.div`
+const Row = styled.div`
         display: flex;        
         align-items: flex-start;
         justify-content: flex-start;        
     `;
 
-    const Column = styled.div`
+const Column = styled.div`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -28,10 +25,11 @@ const Welcome = (props: WelcomeProps) => {
         height: 462px;
     `;
 
-    const NewsletterStyle = styled.div`
+const NewsletterStyle = styled.div`
         height: 75px;
     `;
 
+const Welcome = (props: WelcomeProps) => {
     return (
         <Row>
             <Column>
@@ -41,7 +39,7 @@ const Welcome = (props: WelcomeProps) => {
                 <NewsletterStyle>
                     <Newsletter />
                 </NewsletterStyle>
-            </Column>            
+            </Column>
         </Row>
     )
 }

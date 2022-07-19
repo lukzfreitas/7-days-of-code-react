@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Px2vw from "../../../utils/Px2vw";
 import ImageComponent from "../../DataDisplay/Image";
 import Button from "../../Inputs/Button";
 import Label from "../../Typography/Label";
@@ -10,47 +9,51 @@ interface CardProps {
     subtitle: string;
     textButton: string;
     imgUrl: string;
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
     margin?: number;
 }
 
-const Card = (props: CardProps) => {
+const Row = styled.div((props: { height: string, width: string }) => ({
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    backgroundColor: '#ffffff',
+    boxShadow: '10px 10px 30px rgba(0, 0, 0, 0.06)',
+    width: props.width || '100%',
+    height: props.height || '100%',
+}));
 
-    const Row = styled.div`
-        display: flex;        
-        align-items: flex-start;
-        justify-content: flex-start;
-        background-color: #ffffff;
-        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);        
-        width: ${props.width || '100%'};
-        height: ${props.height || '100%'};
-    `;
+const Column = styled.div((props: { margin: number }) => ({
+    display: "flex",
+    flexFlow: "column", // check if flexFlow works like flexDiretion    
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    margin: props.margin,
+}))
 
-    const Column = styled.div`
-        display: flex;        
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;      
-        margin: ${props.margin || 10};
-    `;
+const TitleStyle = styled.div(({
+    marginTop: '20px'
+}));
 
-    const TitleStyle = styled.div`
-        margin-top: 20px;
-    `
+const LabelStyle = styled.div(({
+    marginTop: '10px'
+}));
 
-    const LabelStyle = styled.div`
-        margin-top: 10px;
-    `
+const ButtonStyle = styled.div(({
+    marginTop: '30px'
+}))
 
-    const ButtonStyle = styled.div`
-        margin-top: 30px;   
-    `
-
+const Card = ({
+    width = '100%',
+    height = '100%',
+    margin = 10,
+    ...props
+}: CardProps) => {
     return (
-        <Row>
+        <Row width={width} height={height} >
             <ImageComponent src={props.imgUrl} />
-            <Column>
+            <Column margin={margin}>
                 <TitleStyle>
                     <Title label={props.title} size="medium" />
                 </TitleStyle>

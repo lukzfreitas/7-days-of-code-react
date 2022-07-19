@@ -9,9 +9,7 @@ interface MyPlantProps {
     title: string;
 }
 
-const MyPlant = (props: MyPlantProps) => {
-
-    const Row = styled.div`
+const Row = styled.div`
         display: flex;        
         align-items: flex-start;
         justify-content: flex-start;        
@@ -19,7 +17,7 @@ const MyPlant = (props: MyPlantProps) => {
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     `;
 
-    const Column = styled.div`
+const Column = styled.div`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -27,10 +25,12 @@ const MyPlant = (props: MyPlantProps) => {
         padding: 20px;        
     `;
 
-    const ItemStyle = styled.div`
+const ItemStyle = styled.div`
         margin-top: 40px;
     `;
 
+const MyPlant = (props: MyPlantProps) => {
+    
     const items = [
         "Escolha suas plantas",
         "Faça seu pedido",
