@@ -1,33 +1,13 @@
-import styled from "styled-components";
 import ImageComponent from "../../components/DataDisplay/Image";
 import Item from "../../components/DataDisplay/Item";
 import Label from "../../components/Typography/Label";
 import Title from "../../components/Typography/Title";
+import { Column, ItemStyle, Row } from "./styled";
 
 interface MyPlantProps {
     prefixTitle: string;
     title: string;
 }
-
-const Row = styled.div`
-        display: flex;        
-        align-items: flex-start;
-        justify-content: flex-start;        
-        background-color: #FFFFFF;
-        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-    `;
-
-const Column = styled.div`
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;        
-        padding: 20px;        
-    `;
-
-const ItemStyle = styled.div`
-        margin-top: 40px;
-    `;
 
 const MyPlant = (props: MyPlantProps) => {
     

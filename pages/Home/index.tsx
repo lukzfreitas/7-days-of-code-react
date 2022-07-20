@@ -1,48 +1,12 @@
-import styled from "styled-components";
 import Header from "../../src/components/Surfaces/Header";
-import Label from "../../src/components/Typography/Label";
 import MyPlant from "../../src/patterns/MyPlant";
 import Sale from "../../src/patterns/Sale";
 import Welcome from "../../src/patterns/Welcome";
-import Px2vw from "../../src/utils/Px2vw";
+import { Body, HeaderStyle, MyPlantStyle, SaleStyle, WelcomeStyle } from "./styled";
 
 interface HomeProps {
 
 };
-
-const Body = styled.div`
-        height: 100%;        
-        width: 100%;
-        background-color: #f8f6f6;
-        background-position: center top;
-        background-size: 100% auto;        
-    `
-
-const HeaderStyle = styled.div`
-        position: relative;
-        z-index: 1;
-    `
-
-const WelcomeStyle = styled.div`
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;        
-        margin-inline: ${Px2vw(220)};
-    `;
-
-const MyPlantStyle = styled.div`
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;        
-    `;
-
-const SaleStyle = styled.div`
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 40px;
-        margin-inline: ${Px2vw(220)};
-    `;
 
 export const Home = (props: HomeProps) => {
     return (        

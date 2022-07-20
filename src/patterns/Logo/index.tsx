@@ -4,8 +4,8 @@ import ImageComponent from "../../components/DataDisplay/Image";
 interface LogoProps {
     imageUrl: string;
     alt: string;
-    width: number;
-    height: number;
+    width: string;
+    height: string;
 }
 
 const Logo = (props: LogoProps) => {

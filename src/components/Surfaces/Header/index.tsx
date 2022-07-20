@@ -32,8 +32,8 @@ const Header = (props: HeaderProps) => {
           <Logo
             imageUrl='https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/logo.png?raw=true'
             alt='Casa Verde'
-            height={44.84}
-            width={177} />
+            height='44.84px'
+            width='177px' />
         </Column>
         <Column>
           <Menu links={links}/>

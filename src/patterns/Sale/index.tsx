@@ -2,33 +2,12 @@ import styled from "styled-components";
 import Card from "../../components/Surfaces/Card";
 import Label from "../../components/Typography/Label";
 import Title from "../../components/Typography/Title";
+import { Column, Column_3, Row } from "./styled";
 
 interface SaleProps {
     prefixTitle: string;
     title: string;
 }
-
-const Row = styled.div`
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;        
-    `
-
-const Column = styled.div`
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;        
-    `;
-
-const Column_3 = styled.div`
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        width: 33%;
-        margin: 10px;
-    `
 
 const Sale = (props: SaleProps) => {
     return (
