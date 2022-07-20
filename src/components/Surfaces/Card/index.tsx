@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
-import styled from "styled-components";
 import ImageComponent from "../../DataDisplay/Image";
 import Button from "../../Inputs/Button";
 import Label from "../../Typography/Label";
 import Title from "../../Typography/Title";
+import { ButtonStyle, Column, LabelStyle, Row, TitleStyle } from "./styled";
 
 interface CardProps {
     title: string;
@@ -14,36 +13,6 @@ interface CardProps {
     height?: string;
     margin?: number;
 }
-
-const Row = styled.div((props: { height: string, width: string }) => ({
-    display: 'flex',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
-    backgroundColor: '#ffffff',
-    boxShadow: '10px 10px 30px rgba(0, 0, 0, 0.06)',
-    width: props.width,
-    height: props.height
-}));
-
-const Column = styled.div((props: { margin: number }) => ({
-    display: "flex",
-    flexFlow: "column", // check if flexFlow works like flexDiretion    
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    margin: props.margin,
-}))
-
-const TitleStyle = styled.div(({
-    marginTop: '20px'
-}));
-
-const LabelStyle = styled.div(({
-    marginTop: '10px'
-}));
-
-const ButtonStyle = styled.div(({
-    marginTop: '30px'
-}))
 
 const Card = ({
     width = '100%',
