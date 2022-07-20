@@ -13,8 +13,7 @@ const Newsletter = (props: NewsletterProps) => {
             <Row>
                 <Input
                     id={'newsletter'}
-                    placeholder="Insira seu e-mail"
-                    iconWidth={'30px'}
+                    placeholder="Insira seu e-mail"                    
                     type='email'
                     iconUrl="https://raw.githubusercontent.com/lukzfreitas/7-days-of-code-react/b02f304aa60fd638de51bcb3b6a870184969ce01/public/post.svg"
                 ></Input>

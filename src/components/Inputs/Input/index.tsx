@@ -15,6 +15,7 @@ interface InputProps {
     border?: string;
     iconUrl?: string;
     iconWidth?: string;
+    iconHeight?: string;
     type?: "text" | "button" | "checkbox" | "search" | "date" | "email" | "file" | "hidden" | "password" | "submit" | "tel" | "number"
 }
 
@@ -22,6 +23,7 @@ interface InputProps {
 const Input = ({
     value = '',
     iconWidth = '40px',
+    iconHeight = '40px',
     ...props
 }: InputProps) => {
 
@@ -37,7 +39,7 @@ const Input = ({
     return (
         <FormControl>
             {props.iconUrl ? <Icon>
-                <ImageComponent src={props.iconUrl} alt="icon" width={iconWidth} height={'12px'} />
+                <ImageComponent src={props.iconUrl} alt="icon" width={iconWidth} height={iconHeight} />
             </Icon> : null}
             <InputStyle
                 value={text}

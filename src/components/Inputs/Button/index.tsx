@@ -1,3 +1,4 @@
+import SendEmail from '../../../../pages/api/SendEmail';
 import ButtonStyle from './styled';
 
 interface ButtonProps {
@@ -27,6 +28,7 @@ const Button = ({
   const handleClick = () => {
     if (disabled) return;
     props.onClick;
+    SendEmail('milamoser@gmail.com', 'lucasrgs17@gmail.com');
   }
 
   return (
