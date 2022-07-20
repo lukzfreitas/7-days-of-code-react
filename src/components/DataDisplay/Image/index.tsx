@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 interface ImageProps {
-    src: string;
+    src: string;    
+    width: string;
+    height: string;
     alt?: string;
-    width?: string;
-    height?: string;
 }
 
 const ImageComponent = (props: ImageProps) => {
