@@ -42,7 +42,8 @@ const MyPlant = (props: MyPlantProps) => {
             <ImageComponent
                 src="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/myPlant.png?raw=true"
                 alt='minha planta'
-                width={460} />
+                width="460px" 
+                height="400px"/>
             <Column>
                 <Label text={props.prefixTitle} />
                 <Title label={props.title} size="medium" />

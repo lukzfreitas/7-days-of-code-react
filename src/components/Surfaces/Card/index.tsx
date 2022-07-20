@@ -50,22 +50,12 @@ const Card = ({
     height = '100%',
     margin = 10,
     ...props
-}: CardProps) => {
-
-    const [widthValue, setWidthValue] = useState(width);
-    const [heightValue, setHeightValue] = useState(height);
-    const [marginValue, setMarginValue] = useState(margin);
-
-    useEffect(() => {
-        setWidthValue(width);
-        setHeightValue(height);
-        setMarginValue(margin);
-    }, [])
+}: CardProps) => {    
 
     return (
-        <Row width={widthValue} height={heightValue} >
-            <ImageComponent src={props.imgUrl} />
-            <Column margin={marginValue}>
+        <Row width={width} height={height} >
+            <ImageComponent src={props.imgUrl} width="500px" height="700px" />
+            <Column margin={margin}>
                 <TitleStyle>
                     <Title label={props.title} size="medium" />
                 </TitleStyle>

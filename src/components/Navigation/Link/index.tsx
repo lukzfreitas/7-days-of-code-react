@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 interface LinkProps {
@@ -17,16 +16,10 @@ const LabelStyled = styled.p((props: { visited: boolean }) => ({
     }
 }));
 
-const Link = (props: LinkProps) => {
-
-    const [visitedValue, setVisitedValue] = useState(props.visited);
-
-    useEffect(() => {
-        setVisitedValue(props.visited);
-    }, [])
+const Link = (props: LinkProps) => {    
 
     return (
-        <LabelStyled visited={visitedValue} onClick={() => props.onClick()}>
+        <LabelStyled visited={props.visited} onClick={() => props.onClick()}>
             {props.label}
         </LabelStyled>
     );

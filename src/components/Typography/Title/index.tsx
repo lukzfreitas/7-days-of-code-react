@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 interface TitleProps {
@@ -19,14 +18,8 @@ const Title = ({
     ...props
 }: TitleProps) => {
 
-    const [sizeValue, setSizeValue] = useState(size);
-
-    useEffect(() => {
-        setSizeValue(size);
-    }, [])
-
     return (
-        <TitleStyle size={sizeValue}>
+        <TitleStyle size={size}>
             {props.label}
         </TitleStyle>
     )

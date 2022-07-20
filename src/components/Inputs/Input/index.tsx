@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
+import ImageComponent from "../../DataDisplay/Image";
 import Button from "../Button";
 
 interface InputProps {
@@ -13,7 +14,7 @@ interface InputProps {
     backgroundColor?: string;
     border?: string;
     iconUrl?: string;
-    iconWidth?: number;
+    iconWidth?: string;
     type?: "text" | "button" | "checkbox" | "search" | "date" | "email" | "file" | "hidden" | "password" | "submit" | "tel" | "number"
 }
 
@@ -56,8 +57,8 @@ const Icon = styled.div`
 
 
 const Input = ({
-    value = '',    
-    iconWidth = 40,    
+    value = '',
+    iconWidth = '40px',
     ...props
 }: InputProps) => {
 
@@ -67,16 +68,16 @@ const Input = ({
 
     const handleChangeValue = (event: any) => {
         setValid(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(event.target.value))
-        setText(event.target.value);        
+        setText(event.target.value);
     }
 
     return (
         <FormControl>
-            <Icon>
-                <img src={props.iconUrl} alt="icon" width={iconWidth} />
-            </Icon>
+            {props.iconUrl ? <Icon>
+                <ImageComponent src={props.iconUrl} alt="icon" width={iconWidth} height={'12px'} />
+            </Icon> : null}
             <InputStyle
-                value={text}                
+                value={text}
                 onChange={e => handleChangeValue(e)}
                 placeholder={props.placeholder}
                 type={props.type}
