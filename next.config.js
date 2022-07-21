@@ -7,6 +7,9 @@ const nextConfig = {
   },
   compiler: {    
     styledComponents: true
+  },
+  env: {
+    APIKEY_SENDGRID: process.env.APIKEY_SENDGRID
   }
 }
 

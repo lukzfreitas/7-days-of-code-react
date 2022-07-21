@@ -1,16 +1,20 @@
-const SendEmail = async (from: string, to: string,) => {
-    console.log(to);
-    console.log(from);    
-    // const response = await fetch('https://api.sendgrid.com/v3/', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //       'X-My-Custom-Header': 'value-v',
-    //       'Authorization': `Bearer ${process.env.api_key_send_grid}`,          
-    //     },
-    //     body: `{"personalizations":[{"to":[{"email":"${to}","name":"John Doe"}],"subject":"Hello, World!"}],"content": [{"type": "text/plain", "value": "Heya!"}],"from":{"email":"${from}","name":"Sam Smith"},"reply_to":{"email":"${from}","name":"Sam Smith"}}`
-    // })
-    // console.log(response);
+const SendEmail = async (from: string, to: string,) => {    
+    fetch('https://api.sendgrid.com/v3/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        //   'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+        //   'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+          'Authorization': `Bearer ${process.env.APIKEY_SENDGRID}`,          
+        },
+        body: `{"personalizations":[{"to":[{"email":"${to}","name":"John Doe"}],"subject":"Hello, World!"}],"content": [{"type": "text/plain", "value": "Heya!"}],"from":{"email":"${from}","name":"Sam Smith"},"reply_to":{"email":"${from}","name":"Sam Smith"}}`
+    }).then((response) => {
+        console.log(response);
+    }).catch((error) => {
+        console.log(error);
+    })
+    
 }
 
 export default SendEmail
