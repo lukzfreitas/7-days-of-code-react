@@ -17,6 +17,7 @@ interface InputProps {
     iconWidth?: string;
     iconHeight?: string;
     type?: "text" | "button" | "checkbox" | "search" | "date" | "email" | "file" | "hidden" | "password" | "submit" | "tel" | "number"
+    buttonText?: string;
 }
 
 
@@ -24,6 +25,7 @@ const Input = ({
     value = '',
     iconWidth = '40px',
     iconHeight = '40px',
+    buttonText = '',
     ...props
 }: InputProps) => {
 
@@ -47,7 +49,7 @@ const Input = ({
                 placeholder={props.placeholder}
                 type={props.type}
             />
-            <Button label="Assinar newsletter" size="large" disabled={!valid} primary={true}></Button>
+            <Button label={buttonText} size="large" disabled={!valid} primary={true}></Button>
         </FormControl>
     );
 }

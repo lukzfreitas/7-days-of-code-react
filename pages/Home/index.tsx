@@ -1,3 +1,4 @@
+import { useIntl } from "react-intl";
 import Header from "../../src/components/Surfaces/Header";
 import MyPlant from "../../src/patterns/MyPlant";
 import Sale from "../../src/patterns/Sale";
@@ -9,6 +10,17 @@ interface HomeProps {
 };
 
 export const Home = (props: HomeProps) => {
+
+    const intl = useIntl();
+
+    const title = intl.formatMessage({ id: "page.home.title" });
+    const prefixTitle = intl.formatMessage({ id: "page.home.prefixTitle" });
+    const description = intl.formatMessage({ id: "page.home.description" });
+    const howToGet = intl.formatMessage({ id: "page.home.howToGet" });
+    const myPlant = intl.formatMessage({ id: "page.home.myPlant" });
+    const knowOur = intl.formatMessage({ id: "page.home.knowOur" });
+    const sales = intl.formatMessage({ id: "page.home.sales" });
+    
     return (        
         <Body>
             <HeaderStyle>
@@ -16,15 +28,15 @@ export const Home = (props: HomeProps) => {
             </HeaderStyle>
             <WelcomeStyle>                
                 <Welcome
-                    prefixTitle="Sua casa com as"
-                    title="melhores plantas"
-                    text="Encontre aqui uma vasta seleção de plantas para decorar a sua casa e torná-lo uma pessoa mais feliz no seu dia a dia. Entre com seu e-mail e assine nossa newsletter para saber das novidades da marca." />
+                    prefixTitle={prefixTitle}
+                    title={title}
+                    text={description} />
             </WelcomeStyle>
             <MyPlantStyle>
-                <MyPlant prefixTitle="Como conseguir" title="minha planta" />
+                <MyPlant prefixTitle={howToGet} title={myPlant} />
             </MyPlantStyle>
             <SaleStyle>
-                <Sale prefixTitle='Conheça nossa' title='Ofertas' />
+                <Sale prefixTitle={knowOur} title={sales} />
             </SaleStyle>
         </Body>
     );

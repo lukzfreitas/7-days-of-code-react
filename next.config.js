@@ -10,7 +10,11 @@ const nextConfig = {
   },
   env: {
     APIKEY_SENDGRID: process.env.APIKEY_SENDGRID
-  }
+  },  
+  i18n: {
+    locales: ["en", "pt"],
+    defaultLocale: "pt",
+  },
 }
 
 module.exports = nextConfig

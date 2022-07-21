@@ -32,7 +32,7 @@ const Card = ({
                     <Label text={props.subtitle} />
                 </LabelStyle>
                 <ButtonStyle>
-                    <Button label="Comprar" primary={false} />
+                    <Button label={props.textButton} primary={false} />
                 </ButtonStyle>
             </Column>
         </Row>
