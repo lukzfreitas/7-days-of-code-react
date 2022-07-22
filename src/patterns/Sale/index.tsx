@@ -1,4 +1,3 @@
-import { useIntl } from "react-intl";
 import Card from "../../components/Surfaces/Card";
 import Label from "../../components/Typography/Label";
 import Title from "../../components/Typography/Title";
@@ -6,15 +5,12 @@ import { Column, Column_3, Row } from "./styled";
 
 interface SaleProps {
     prefixTitle: string;
-    title: string;
+    title: string;    
+    buttonText: string;
 }
 
 const Sale = (props: SaleProps) => {
-
-    const intl = useIntl();
-
-    const buy = intl.formatMessage({ id: "page.home.buy" })
-    const currency = intl.formatMessage({ id: "page.home.currency" })
+    
 
     return (
         <Column>
@@ -24,24 +20,24 @@ const Sale = (props: SaleProps) => {
                 <Column_3>
                     <Card
                         title='Ajuga reptans'
-                        subtitle={`${currency} 20,00`}
-                        textButton={buy}
+                        subtitle={`R$ 20,00`}
+                        textButton={props.buttonText}
                         imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
                     />
                 </Column_3>
                 <Column_3>
                     <Card
                         title='Ajuga reptans'
-                        subtitle={`${currency} 20,00`}
-                        textButton={buy}
+                        subtitle={`R$ 20,00`}
+                        textButton={props.buttonText}
                         imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
                     />
                 </Column_3>
                 <Column_3>
                     <Card
                         title='Ajuga reptans'
-                        subtitle={`${currency} 20,00`}
-                        textButton={buy}
+                        subtitle={`R$ 20,00`}
+                        textButton={props.buttonText}
                         imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
                     />
                 </Column_3>
@@ -50,24 +46,24 @@ const Sale = (props: SaleProps) => {
                 <Column_3>
                     <Card
                         title='Ajuga reptans'
-                        subtitle={`${currency} 20,00`}
-                        textButton={buy}
+                        subtitle={`R$ 20,00`}
+                        textButton={props.buttonText}
                         imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
                     />
                 </Column_3>
                 <Column_3>
                     <Card
                         title='Ajuga reptans'
-                        subtitle={`${currency} 20,00`}
-                        textButton={buy}
+                        subtitle={`R$ 20,00`}
+                        textButton={props.buttonText}
                         imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
                     />
                 </Column_3>
                 <Column_3>
                     <Card
                         title='Ajuga reptans'
-                        subtitle={`${currency} 20,00`}
-                        textButton={buy}
+                        subtitle={`R$ 20,00`}
+                        textButton={props.buttonText}
                         imgUrl="https://github.com/lukzfreitas/7-days-of-code-react/blob/main/public/produto-01.png?raw=true"
                     />
                 </Column_3>

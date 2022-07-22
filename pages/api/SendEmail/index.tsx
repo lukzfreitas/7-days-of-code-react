@@ -3,9 +3,7 @@ const SendEmail = async (from: string, to: string,) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-        //   'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-        //   'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+          'Access-Control-Allow-Origin': '*',        
           'Authorization': `Bearer ${process.env.APIKEY_SENDGRID}`,          
         },
         body: `{"personalizations":[{"to":[{"email":"${to}","name":"John Doe"}],"subject":"Hello, World!"}],"content": [{"type": "text/plain", "value": "Heya!"}],"from":{"email":"${from}","name":"Sam Smith"},"reply_to":{"email":"${from}","name":"Sam Smith"}}`

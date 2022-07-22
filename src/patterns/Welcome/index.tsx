@@ -8,6 +8,8 @@ interface WelcomeProps {
     prefixTitle: string
     title: string;
     text: string;
+    placeholderNewsletter: string;
+    buttonTextNesletter: string;
 }
 
 const Welcome = (props: WelcomeProps) => {
@@ -18,7 +20,10 @@ const Welcome = (props: WelcomeProps) => {
                 <Title label={props.title} />
                 <Paragraph text={props.text} />
                 <NewsletterStyle>
-                    <Newsletter />
+                    <Newsletter
+                        buttonText={props.buttonTextNesletter}
+                        placeholder={props.placeholderNewsletter}
+                    />
                 </NewsletterStyle>
             </Column>
         </Row>
